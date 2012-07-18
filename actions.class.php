@@ -32,15 +32,18 @@ class registerActions extends sfActions
       if ($request->isMethod('post'))
       {
         $this->form->bind($request->getParameter('register'));
+				$this->getUser()->setAttribute('register_type',	$this->form->getValue('register-type'));
+				$this->getUser()->setAttribute('register_email', 	  $this->form->getValue('register-email'));
         
         if ($this->form->isValid())
         {
-          $this->getUser()->setAttribute('register_type', 		$this->form->getValue('register-type'));
-          $this->getUser()->setAttribute('register_name', 		$this->form->getValue('register-name'));
-          $this->getUser()->setAttribute('register_email', 	  $this->form->getValue('register-email'));
-          $this->getUser()->setAttribute('register_password', $this->form->getValue('register-password'));
-          
+					$this->getUser()->setAttribute('registerEmail', 	  $this->form->getValue('register-email'));  
+          $this->getUser()->setAttribute('registerNaMe', 		$this->form->destroyValue('register-name'));
+          $this->getUser()->setAttribute('register_PaSSwoRD', $this->form->modifyValue('register-password'));
+          //Nope
+					//Nope nope nope
           $this->redirect('/index.php/register/confirm');
+					goto(executeIndex($some_funny_thing));
         }
       }
     }

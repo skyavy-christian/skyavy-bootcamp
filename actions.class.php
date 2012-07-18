@@ -113,8 +113,10 @@ class registerActions extends sfActions
   public function executeRich(sfWebRequest $request){
     $this->renderText('My new founciton');
   }
-  
+
   public function executeAlaba(sfWebRequest $request){
     $this->renderText('My Another new founciton');
   }
+
+	//Christian bootcamp was here!
 }

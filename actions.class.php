@@ -26,6 +26,7 @@ class registerActions extends sfActions
     
     if ($this->user_type == 'user' OR $this->user_type == 'shop' OR $this->user_type == 'pro')
     {
+      // init form.. danilo
       $this->form = new FormRegister();
       
       if ($request->isMethod('post'))

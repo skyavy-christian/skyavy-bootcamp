@@ -108,4 +108,8 @@ class registerActions extends sfActions
       }
     }
   }
+  
+  public function executeRich(sfWebRequest $request){
+    $this->renderText('My new founciton');
+  }
 }

@@ -118,5 +118,10 @@ class registerActions extends sfActions
     $this->renderText('My Another new founciton');
   }
 
-	//Christian bootcamp was here!
+  public function executeFail()
+  {
+    $this->renderText('Blehhh..');
+  }
+
+	//Christian bootcamp was here! << added here! danilo..
 }

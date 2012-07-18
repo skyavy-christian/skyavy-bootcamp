@@ -111,12 +111,12 @@ class registerActions extends sfActions
   }
   
   public function executeRich(sfWebRequest $request){
-    $this->renderText('My new founciton');
+    $this->renderText('My new function');
   }
 
-  public function executeAlaba(sfWebRequest $request){
-    $this->renderText('My Another new founciton');
+  public function executeAlabaThisIsNew(sfWebRequest $request){
+    $this->renderText('My Another new function');
   }
 
-	//Christian bootcamp was here!
+	//Christian love aini bootcamp was here!
 }
